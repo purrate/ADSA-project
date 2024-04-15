@@ -418,7 +418,7 @@ class B_Tree_Tester:
 
     def random_tree(self):
         key_range = 10*self.num_ops
-        for i in range(num_ops):
+        for i in range(self.num_ops):
             self.insert(randint(-key_range, key_range))
 
 
@@ -428,3 +428,6 @@ class B_Tree_Tester:
 
     def __repr__(self):
         return repr(self.T)
+    
+tester = B_Tree_Tester(4, 15)
+tester.perform_tests()

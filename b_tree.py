@@ -299,7 +299,7 @@ class Node:
         """
         Returns a string representing self.
         """
-        T = Btree(2)
+        T = B_Tree(2)
         T.root = Node(self.keys, [Node(child.keys, []) for child in self.children])
         return str(T)
 
