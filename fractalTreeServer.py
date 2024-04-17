@@ -22,7 +22,9 @@ class Node(object):
         self.parent = None
         self.leaf = True
         self.buffer=[]
-        self.BUFFER_SIZE = order//2
+        #self.BUFFER_SIZE = order//2
+        self.BUFFER_SIZE = order * 512
+        #self.BUFFER_SIZE = order // 2
         self.dict={}
 
 
