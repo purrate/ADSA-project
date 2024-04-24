@@ -357,30 +357,6 @@ class FractalTree(object):
                     current_node = current_node.keys[i + 1]
                     break
         return current_node
-
-    # Delete a node
-    def delete(self, key, value):
-        
-        # search and find the leaf node where the value may exists
-        node_ = self.search(key)
-
-        exists = 0 #flag to indicate whether the value exists.  
-        for i, item in enumerate(node_.values):
-            if item == value:
-                exists = 1
-                if node_ == self.root:
-                    node_.values.pop(i)
-                    node_.keys.pop(i)
-                else:
-                    node_.keys.pop(i)
-                    node_.values.pop(i)
-                    self.deleteEntry(node_, value, key)
-        if not exists:
-            print("Value not in Tree")
-            return
-
-    # Delete an entry
-    def deleteEntry(self, node_, value, key):
         if not node_.leaf:
             for i, item in enumerate(node_.keys):
                 if item == key:
