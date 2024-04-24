@@ -4,14 +4,13 @@ import sys
 
 ORDER = 32
 
-tree = FractalTree(order=ORDER)  # fractal tree object
+tree = FractalTree(order=ORDER)
 import os
 print(os.getcwd())
 
 DATAFILE = f"./datasets/{sys.argv[1]}"
 
 with open(DATAFILE, "r") as f:
-    # csv.DictReader uses first row for column names by default
     reader = csv.DictReader(f)
     data = [row for row in reader]
 
