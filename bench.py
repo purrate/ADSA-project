@@ -3,7 +3,7 @@ from b_tree import B_Tree
 from fractalTreeServer import FractalTree
 
 ORDER = 32
-INSERT_LIMIT = 100_000
+INSERT_LIMIT = 10_000
 
 @total_ordering
 class KeyValuePair:
@@ -21,6 +21,7 @@ class KeyValuePair:
 
 btree = B_Tree(ORDER)
 ftree = FractalTree(ORDER)
+
 
 from time import perf_counter_ns
 

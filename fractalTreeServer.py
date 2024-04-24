@@ -320,7 +320,7 @@ class FractalTree(object):
 
             key, value,command = msg
             if command.lower() == "insert":
-                key, value = int(msg[0]), msg[1]
+                key, value = msg[0], msg[1]
                 self.insert(node.parent,node, key, value)
             if command.lower()== "delete":
                 self.delete(key,value)
